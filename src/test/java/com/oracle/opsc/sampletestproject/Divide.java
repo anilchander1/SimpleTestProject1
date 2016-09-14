@@ -5,36 +5,37 @@
  */
 package com.oracle.opsc.sampletestproject;
 
+import annotations.TestCase;
+import annotations.TestMetaData;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import annotations.*;
 
 /**
  *
  * @author anilcha
  */
-@TestMetaData()
-public class AddClassTest {
-
-    public AddClassTest() {
+@TestMetaData(summary="Division Test Class", testType="Automated", designer="anil.x.chandran@oracle.com", component="Test Component", testStatus="Design", automationStatus="Planned", testPriority="1-Critical", maintenanceRelease="Y", numberOfTestCases="1", browserTest="No")
+public class Divide {
+    
+    public Divide() {
     }
-
+    
     @BeforeClass
     public static void setUpClass() {
     }
-
+    
     @AfterClass
     public static void tearDownClass() {
     }
-
+    
     @Before
     public void setUp() {
     }
-
+    
     @After
     public void tearDown() {
     }
@@ -42,21 +43,16 @@ public class AddClassTest {
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
-    @api("Addition")
-    @TestCase("This test is for validating Addition of two numbers|Add 3 to 2|Result should be 5")
+    @TestCase("This will test division of two numbers|5 should be divided by 2|result should be 2.5")
     @Test
     public void hello() {
-        AddClass ac = new AddClass();
-        int actual = ac.add(2, 3);
-        assertEquals(6, actual);
     }
     
-    @api("NULL Test")
-    @TestCase("This test is for validating blank logic|Trying to skip any logic|Result should be nothing")
+    @TestCase("This will test division by zero|5 should be divided by 0|Exception should be thrown")
     @Test
-    public void hello1() {
-        AddClass ac = new AddClass();
-        int actual = ac.add(2, 3);
-        assertEquals(6, actual);
+    public void checkVal(){
+        
     }
+    
+    
 }

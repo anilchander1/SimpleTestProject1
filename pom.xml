@@ -14,7 +14,14 @@
             </plugin>
         </plugins>
     </reporting>
-    <dependencies>        
+    <dependencies> 
+        <dependency>
+            <groupId>Annotations</groupId>
+            <artifactId>Annotations</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>D:/javaPrograms/Annotations.jar</systemPath>
+        </dependency>       
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
